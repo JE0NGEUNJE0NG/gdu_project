@@ -161,7 +161,7 @@
 	                      </c:when>
 	                      <c:otherwise>
 		                      <c:forEach var="n" items="${ list }">
-			                      <tr onclick="location.href='${contextPath}/board/noticeDetail.do?no=${n.boardNo}'">
+			                      <tr onclick="location.href='${contextPath}/board/${b.memId == loginUser.memId ? 'noticeDetail.do' : 'noticeIncrease.do'}?no=${n.boardNo}';">
 				                      <td>${ n.boardNo }</td>
 				                      <td>${ n.boardTitle }</td>
 				                      <td>${ n.registDate }</td>
